@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6, p, small {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: .5rem 0 2rem 0;
+  color: #0F373B; }
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: .5rem 0 3rem 0; }
+
+h2 {
+  font-size: 3.25rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0;
+  margin: 0.5rem 0 3.25rem;
+  position: relative; }
+
+h3 {
+  font-size: 2.75rem;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: 5px 0;
+  margin: 0.5rem 0 1rem; }
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  padding: 5px 0;
+  margin: 0.5rem 0; }
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 2.6rem;
+  margin: 0.5rem 0; }
+
+h6 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  text-transform: uppercase; }
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.025rem;
+  font-weight: 300;
+  padding: 0;
+  margin: 0 0 1rem; }
+  p b {
+    font-weight: 600; }
+
+a {
+  color: #0F373B;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none;
+    color: #87b401; }
+
+button.cta, a.cta {
+  border: 2px solid #0F373B;
+  padding: 0.75rem 2rem;
+  background: #0F373B;
+  display: block;
+  color: #ffffff;
+  margin: 20px auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem; }
+  button.cta:hover, a.cta:hover {
+    color: #0F373B;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; }
+
+ul li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.025rem;
+  font-weight: 300;
+  padding: 0;
+  margin: 0 0 1rem 0.5rem; }
+  ul li b {
+    font-weight: 600; }
+
+small {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: 300;
+  padding: 0;
+  margin: 0.5rem 0 1rem; }
+
+.container {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 1.5rem; }
+
+header {
+  display: block;
+  text-align: center;
+  background-color: #0F373B;
+  padding: 1.5rem 0; }
+  header h3 {
+    color: #ffffff;
+    text-transform: uppercase; }
+
+.page {
+  padding: 30px 0;
+  min-height: calc(100vh - 110px); }
+  .page.registration form {
+    display: block;
+    max-width: 768px;
+    margin: 0 auto; }
+    .page.registration form .row {
+      margin: 0 0 1.25rem; }
+      .page.registration form .row input {
+        border: 1px solid #0F373B;
+        padding: 0.75rem 1rem;
+        width: 100%;
+        color: #0F373B; }
+        .page.registration form .row input:focus {
+          border: 1px solid #87b401; }
+      .page.registration form .row.double input:first-of-type {
+        margin: 0 0 1.25rem; }
+      @media all and (min-width: 768px) {
+        .page.registration form .row.double input {
+          display: inline-block;
+          width: calc(50% - 0.65rem); }
+          .page.registration form .row.double input:first-of-type {
+            margin: 0 0.5rem 0 0; }
+          .page.registration form .row.double input:last-of-type {
+            margin: 0 0 0 0.5rem; } }
+    .page.registration form .alert {
+      max-width: 50%;
+      margin: 5rem auto 0; }
+      .page.registration form .alert p {
+        font-size: 1.4rem;
+        text-align: center; }
+
+footer {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #0F373B; }
+  footer small {
+    color: #ffffff; }
+    footer small a {
+      color: #ffffff; }
+
+/*# sourceMappingURL=styles.css.map */
