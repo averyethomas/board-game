@@ -1,26 +1,23 @@
-<?php include 'header.php';?>
+<?php   include 'header.php';
 
-<?php
-	require('connection.php');
+        if (isset($_POST['username']) && isset($_POST['password'])){
 
-    if (isset($_POST['username']) && isset($_POST['password'])){
+            $username = $_POST['username'];
+            $firstname = $_POST['firstname'];
+            $lastname = $_POST['lastname'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
 
-        $username = $_POST['username'];
-        $firstname = $_POST['firstname'];
-        $lastname = $_POST['lastname'];
-	    $email = $_POST['email'];
-        $password = $_POST['password'];
+            $query = "INSERT INTO user (username, firstname, lastname, email, password, game_position) VALUES ('$username', '$firstname', '$lastname', '$email', '$password', '0')";
 
-        $query = "INSERT INTO user (username, firstname, lastname, email, password, game_position) VALUES ('$username', '$firstname', '$lastname', '$email', '$password', '0')";
+            $result = mysqli_query($con, $query);
 
-        $result = mysqli_query($con, $query);
-
-        if($result){
-            $msg = "User Created Successfully.";
-        }else{
-            $msg = "User not created. If you already have an account, please log in. Otherwise, try a different email address or username.";
+            if($result){
+                $msg = "User Created Successfully.";
+            }else{
+                $msg = "User not created. If you already have an account, please log in. Otherwise, try a different email address or username.";
+            }
         }
-    }
 ?>
 
 <div class="page registration">
@@ -43,11 +40,13 @@
                 <button class="cta" name="submit" type="submit">Register</button>
             </div>
 
-            <?php if(isset($msg)){ ?>
-                <div class="alert" role="alert">
-                    <p><?php echo $msg; ?></p>
-                </div>
-            <?php } ?>
+<?php   if(isset($msg)){
+?>
+            <div class="alert" role="alert">
+                <p><?php echo $msg; ?></p>
+            </div>
+<?php   }
+?>r
 
         </form>
     </div>
