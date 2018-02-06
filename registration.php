@@ -11,14 +11,14 @@
 	    $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $query = "INSERT INTO user (username, firstname, lastname, email, password) VALUES ('$username', '$firstname', '$lastname', '$email', '$password')";
+        $query = "INSERT INTO user (username, firstname, lastname, email, password, game_position) VALUES ('$username', '$firstname', '$lastname', '$email', '$password', '0')";
 
         $result = mysqli_query($con, $query);
 
         if($result){
             $msg = "User Created Successfully.";
         }else{
-            $msg = "User not created.";
+            $msg = "User not created. If you already have an account, please log in. Otherwise, try a different email address or username.";
         }
     }
 ?>
