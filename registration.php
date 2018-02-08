@@ -1,4 +1,4 @@
-<?php   include 'header.php';
+<?php   include 'page-components/header.php';
 
         if (isset($_POST['username']) && isset($_POST['password'])){
 
@@ -46,8 +46,7 @@
                 <p><?php echo $msg; ?></p>
             </div>
 <?php   }
-?>r
-
+?>
         </form>
     </div>
 </div>

@@ -11,5 +11,7 @@
     </head>
     <body>
         <header>
-            <h3>Title of Game</h3>
+            <div class="container">
+                <h3>The Title of The Game</h3>
+            </div>
         </header>

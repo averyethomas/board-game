@@ -1,4 +1,4 @@
-<?php   include 'header.php';
+<?php   include 'page-components/header.php';
 
         if($_SERVER["REQUEST_METHOD"] == "POST") {
             // username and password sent from form
@@ -12,23 +12,23 @@
             $count = mysqli_num_rows($result);
 
             if($count == 1) {
-                session_register("myusername");
                 $_SESSION['login_user'] = $myusername;
                 $msg = "Login Successful.";
+                header("location: game-board.php");
             }else {
-                  $msg = "Login Failed.";
+                $msg = "Login Failed.";
             }
         }
-
 ?>
 
-<div class="page registration">
+<div class="page login">
     <div class="container">
         <h1>Login</h1>
-
         <form method="POST">
-            <div class="row double">
+            <div class="row">
                 <input type="text" name="username" placeholder="Username *" required>
+            </div>
+            <div class="row">
                 <input type="password" name="password" placeholder="Password *" required>
             </div>
             <div class="row">
@@ -40,9 +40,9 @@
                     <p><?php echo $msg; ?></p>
                 </div>
             <?php } ?>
-
         </form>
     </div>
 </div>
 
-<?php include 'footer.php';?>
+<?php   include 'page-components/footer.php';
+?>
