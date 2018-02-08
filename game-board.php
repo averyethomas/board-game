@@ -11,11 +11,19 @@
         </div>
         <div class="play">
             <h4>Hello, <?php echo $user['firstname']; ?>. You have not played yet today. Please use your play below.</h4>
-            <h6><?php echo $user['game_position']?></h6>
-<?php       $int = rand(1,6);
-            echo $int;
+<?php       if(isset($_POST['play'])){
+                $int = rand(1,6);
+                $game_position = $user['game_position'];
+                $new_game_position = $int + $game_position;
+                $user_id = $user['id'];
+                $update = "UPDATE user SET game_position=$new_game_position WHERE id=$user_id";
+                mysqli_query($con, $update);
+                echo '<h6>game position:' . $new_game_position . '</h6>';
+            }
 ?>
-            <button class="cta">Play</button>
+            <form method="POST">
+                <button name="play" class="cta">Play</button>
+            </form>
         </div>
         <div class="spaces">
             <div class="space"></div>

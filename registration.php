@@ -39,7 +39,6 @@
             <div class="row">
                 <button class="cta" name="submit" type="submit">Register</button>
             </div>
-
 <?php   if(isset($msg)){
 ?>
             <div class="alert" role="alert">
